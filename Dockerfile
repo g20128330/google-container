@@ -1,1 +1,1 @@
-FROM gcr.io/google_containers/pause-amd64:3.0
+FROM gcr.io/google_containers/kubernetes-dashboard-amd64:v1.6.1
