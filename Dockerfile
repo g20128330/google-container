@@ -1,1 +1,1 @@
-FROM gcr.io/google_containers/heapster-amd64:v1.3.0
+FROM gcr.io/google_containers/node-problem-detector:v0.1
