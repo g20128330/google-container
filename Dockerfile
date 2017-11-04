@@ -4,7 +4,8 @@ FROM openjdk:8-jre
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		apt-transport-https \
 		libzmq5 \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -rf /etc/localtime
 
 # the "ffi-rzmq-core" gem is very picky about where it looks for libzmq.so
 RUN mkdir -p /usr/local/lib \
@@ -35,8 +36,8 @@ RUN set -ex; \
 # https://www.elastic.co/guide/en/logstash/5.0/installing-logstash.html#_apt
 RUN echo 'deb https://artifacts.elastic.co/packages/5.x/apt stable main' > /etc/apt/sources.list.d/logstash.list
 
-ENV LOGSTASH_VERSION 5.6.3
-ENV LOGSTASH_DEB_VERSION 1:5.6.3-1
+ENV LOGSTASH_VERSION 5.1.1
+ENV LOGSTASH_DEB_VERSION 1:5.1.1-1
 
 RUN set -ex; \
 	case "$LOGSTASH_VERSION" in \
