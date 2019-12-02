@@ -1,2 +1,2 @@
-FROM gcr.io/google_containers/coredns:1.2.6
+FROM quay.io/redhat/quay:v3.1.3
 
