@@ -1,2 +1,1 @@
-FROM quay.io/redhat/quay:v3.1.3
-
+FROM gcr.io/google_containers/cadvisor:v0.35.0
